@@ -1,0 +1,94 @@
+@import "./mixin/media.scss";
+
+// Breakpoint
+$breakpoint-xs: 370px;
+$breakpoint-sm: 550px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 960px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+$breakpoint-xxxl: 2000px;
+
+:root {
+  // Spacing
+  --space-unit: 8px;
+  --space-xs: calc(0.25 * var(--space-unit));
+  --space-sm: calc(0.5 * var(--space-unit));
+  --space: var(--space-unit);
+  --space-lg: calc(2 * var(--space-unit));
+  --space-xl: calc(3 * var(--space-unit));
+  --space-xxl: calc(4 * var(--space-unit));
+  --space-xxxl: calc(5 * var(--space-unit));
+  --space-xxxxl: calc(6 * var(--space-unit));
+
+  --color-text: #051826;
+  --color-gray-1: #E8EEF2;
+  --color-gray-2: #C7D3DD;
+  --color-gray-3: #7595AC;
+
+
+  --color-purple: #004474;
+  --color-purple-light: #01518A;
+  --color-purple-lighter: #0761A1;
+  --color-orange: #F4B74D;
+  --color-orange-light: #F1C983;
+  --color-blue-dark: #156fff;
+  --color-blue: #2883ff;
+  --color-green: #72d481;
+  --color-red: #ff534e;
+
+  --button-color: var(--color-orange);
+  --button-hover-color: lighten(var(--color-orange), 10%);
+
+  --white: #fff;
+  --black: #000;
+
+  // Typography
+  --minor-second: 1.067;
+  --major-second: 1.125;
+  --minor-third: 1.2;
+  --major-third: 1.25;
+  --perfect-fourth: 1.333;
+  --augmented-fourth: 1.414;
+  --perfect-fifth: 1.5;
+  --golden-ratio: 1.618;
+
+  --type-scale: var(--augmented-fourth);
+  --text-base: 16px;
+  --font-family: sans-serif;
+
+  --text-xxs: calc(var(--text-base) * calc(var(--type-scale) / 2));
+  --text-xs: calc(var(--text-base) * calc(var(--type-scale) / 1.8));
+  --text-sm: calc(var(--text-base) * calc(var(--type-scale) / 1.6));
+  --text-md: var(--text-base);
+  --text-lg: calc(var(--text-base) * var(--type-scale));
+  --text-xl: calc(var(--text-base) * calc(var(--type-scale) * 1.65));
+  --text-xxl: calc(var(--text-base) * calc(var(--type-scale) * 2.4));
+  --text-xxxl: calc(var(--text-base) * calc(var(--type-scale) * 3));
+
+  // Font weight
+  --text-regular: 300;
+  --text-medium: 500;
+  --text-semi-bold: 700;
+  --text-bold: 900;
+
+  // Radius
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+
+  // Animation
+  --transition-fast: 0.1s;
+  --transition-normal: 0.3s;
+  --transition-slow: 0.6s;
+
+  --animate-duration: 1s;
+
+  @include media($breakpoint-md, "max-width") {
+    --text-base: 16px;
+  }
+
+  @include media($breakpoint-sm, "max-width") {
+    --text-base: 14px;
+  }
+}

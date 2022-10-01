@@ -1,0 +1,41 @@
+{
+  "name": "chloris-web",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "parcel src/index.pug",
+    "build": "parcel build src/index.pug --dist-dir build --public-url /"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jassimabdullatheef/chloris-web.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Jassim Abdul Latheef",
+    "email": "hi@jassim.in",
+    "url": "https://jassim.in"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jassimabdullatheef/chloris-web/issues"
+  },
+  "homepage": "https://github.com/jassimabdullatheef/chloris-web#readme",
+  "devDependencies": {
+    "@parcel/transformer-babel": "^2.7.0",
+    "@parcel/transformer-pug": "^2.7.0",
+    "@parcel/transformer-sass": "^2.7.0",
+    "@parcel/transformer-webmanifest": "^2.7.0",
+    "autoprefixer": "^10.2.6",
+    "cssnano": "^5.0.5",
+    "parcel": "^2.7.0",
+    "postcss": "^8.2.15",
+    "postcss-modules": "^4.0.0",
+    "postcss-selector-parser": "^6.0.6",
+    "pug": "^3.0.2",
+    "sass": "^1.34.0"
+  }
+}

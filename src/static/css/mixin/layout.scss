@@ -1,0 +1,78 @@
+@import "./media";
+
+@mixin gap($type, $size) {
+  .#{$type}-#{$size} {
+    #{$type}: calc(var(--space) * #{$size});
+  }
+  .#{$type}-top-#{$size} {
+    #{$type}-top: calc(var(--space) * #{$size});
+  }
+  .#{$type}-bottom-#{$size} {
+    #{$type}-bottom: calc(var(--space) * #{$size});
+  }
+  .#{$type}-left-#{$size} {
+    #{$type}-left: calc(var(--space) * #{$size});
+  }
+  .#{$type}-right-#{$size} {
+    #{$type}-right: calc(var(--space) * #{$size});
+  }
+}
+
+@mixin responsive-columns($size, $keyword) {
+  @include media($size) {
+    .column--#{$keyword}--auto {
+      flex: none;
+      width: auto;
+    }
+
+    .column--#{$keyword}--fit {
+      flex: 1;
+    }
+
+    .column--#{$keyword}--full {
+      flex: none;
+      width: 100%;
+    }
+
+    .column--#{$keyword}--half {
+      flex: none;
+      width: 50%;
+    }
+
+    .column--#{$keyword}--three-quarter {
+      flex: none;
+      width: 75%;
+    }
+
+    .column--#{$keyword}--quarter {
+      flex: none;
+      width: 25%;
+    }
+
+    .column--#{$keyword}--one-third {
+      flex: none;
+      width: calc(100% / 3);
+    }
+
+    .column--#{$keyword}--two-third {
+      flex: none;
+      width: calc(100% - 100% / 3);
+    }
+  }
+}
+
+@mixin responsive-toggle($size, $keyword) {
+  @include media($size) {
+    .#{$keyword}--hide {
+      display: none !important;
+    }
+
+    .#{$keyword}--show {
+      display: block !important;
+
+      &.container {
+        display: flex !important;
+      }
+    }
+  }
+}

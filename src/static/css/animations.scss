@@ -1,0 +1,128 @@
+@for $i from 1 through 15 {
+  @keyframes particle-animation-#{$i} {
+    0% {
+      transform: translate3d(
+        ((random(150) - random(200)) * 1px),
+        ((random(150) - random(200)) * 1px),
+        (random(100) * 1px)
+      );
+    }
+    25% {
+      transform: translate3d(
+        ((random(150) - random(200)) * 1px),
+        ((random(150) - random(200)) * 1px),
+        (random(100) * 1px)
+      );
+    }
+    50% {
+      transform: translate3d(
+        ((random(150) - random(200)) * 1px),
+        ((random(150) - random(200)) * 1px),
+        (random(100) * 1px)
+      );
+    }
+    75% {
+      transform: translate3d(
+        ((random(150) - random(200)) * 1px),
+        ((random(150) - random(200)) * 1px),
+        (random(100) * 1px)
+      );
+    }
+    100% {
+      transform: translate3d(
+        ((random(150) - random(200)) * 1px),
+        ((random(150) - random(200)) * 1px),
+        (random(100) * 1px)
+      );
+    }
+  }
+
+  .particle:nth-child(#{$i}) {
+    animation: particle-animation-#{$i} 60s infinite;
+    animation-delay: -$i * 0.2s;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes card-animation-1 {
+  0% {
+    transform: translate3d(20px, -20px, 1px);
+  }
+  100% {
+    transform: translate3d(-20px, 20px, 1px);
+  }
+}
+
+@keyframes card-animation-2 {
+  0% {
+    transform: translate3d(-20px, -20px, 1px);
+  }
+  100% {
+    transform: translate3d(20px, 20px, 1px);
+  }
+}
+
+.card-animation-1 {
+  animation: card-animation-1 30s infinite;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+.card-animation-2 {
+  animation: card-animation-2 30s infinite;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+.animated {
+  animation-duration: var(--animate-duration);
+  animation-fill-mode: both;
+
+  &.slow {
+    animation-duration: calc(var(--animate-duration) * 2);
+  }
+
+  &.slower {
+    animation-duration: calc(var(--animate-duration) * 3);
+  }
+
+  &.delay-1s {
+    animation-delay: var(--animate-delay);
+  }
+
+  &.delay-2s {
+    animation-delay: calc(var(--animate-delay) * 2);
+  }
+
+  &.delay-3s {
+    animation-delay: calc(var(--animate-delay) * 3);
+  }
+
+  &.delay-4s {
+    animation-delay: calc(var(--animate-delay) * 4);
+  }
+
+  &.delay-5s {
+    animation-delay: calc(var(--animate-delay) * 5);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}

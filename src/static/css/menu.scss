@@ -1,0 +1,31 @@
+.menu {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  font-weight: var(--text-bold);
+  flex-wrap: wrap;
+
+  &--vertical {
+    @extend .menu;
+    flex-direction: column;
+  }
+
+  &--light {
+    font-weight: var(--text-medium);
+  }
+
+  li {
+    display: inline-flex;
+    a {
+      cursor: pointer;
+      font-size: var(--text-sm);
+      padding: var(--space) var(--space-lg);
+    }
+  }
+
+  &.is-full-width {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

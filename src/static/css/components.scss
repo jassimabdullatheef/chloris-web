@@ -1,0 +1,8 @@
+.hero {
+  background-image: url("../../images/hero-bg.jpg");
+  background-size: cover;
+  display: block;
+  .title {
+    color: var(--color-purple);
+  }
+}

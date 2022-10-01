@@ -1,0 +1,65 @@
+a {
+    color: var(--color-purple-lighter);
+    transition: all var(--transition-fast) ease;
+    text-decoration: none;
+    &:hover {
+        color: var(--color-purple);
+        text-decoration: none;
+    }
+}
+
+.button {
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding: var(--space-lg) var(--space-xxl);
+    font-size: var(--text-md);
+    font-weight: var(--text-bold);
+    svg {
+        margin-right: var(--space);
+    }
+    &--sm {
+        font-size: var(--text-sm);
+        padding: var(--space) var(--space-xl);
+    }
+    &--lg {
+        padding: var(--space-xl) var(--space-xxl);
+    }
+    &--primary,
+    &--secondary,
+    &--neutral {
+        background-color: var(--button-color);
+        color: var(--button-text-color);
+        padding: var(--space-lg) var(--space-xxl);
+        border-radius: 50px;
+        &:hover {
+            background-color: var(--button-hover-color);
+            color: var(--button-text-color);
+        }
+    }
+    &--primary {
+        --button-color: var(--color-purple);
+        --button-hover-color: var(--color-purple-lighter);
+        --button-text-color:  var(--white);
+    }
+    &--secondary {
+        --button-color: var(--color-orange);
+        --button-hover-color: var(--color-orange-light);
+        --button-text-color:  var(--color-purple);
+    }
+    &--neutral {
+        --button-color: var(--color-gray-2);
+        --button-hover-color: var(--color-gray-1);
+        --button-text-color:  var(--color-purple);
+    }
+    &--outline {
+        background-color: transparent;
+        border: 2px solid var(--button-color);
+        color: var(--button-color);
+        &:hover {
+            background-color: var(--button-color);
+            color: var(--white);
+        }
+    }
+}

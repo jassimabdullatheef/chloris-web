@@ -1,0 +1,127 @@
+@import "mixin/typography";
+
+$font-family-en: "Poppins";
+$body-text-color: var(--color-text);
+$header-text-color: var(--color-text);
+$header-selectors: "h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .title";
+
+html,
+body {
+  @include typography;
+
+  // sass-lint:disable no-vendor-prefixes
+  -webkit-font-smoothing: antialiased;
+  color: $body-text-color;
+  font-family: $font-family-en, "Helvetica", sans-serif;
+}
+
+#{$header-selectors} {
+  color: $header-text-color;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+}
+
+// Body Text font style
+p {
+  margin: 0 0 var(--space);
+  font-weight: var(--text-medium);
+  line-height: 1.4em;
+}
+
+p,
+ul,
+li,
+ol,
+th,
+td,
+a,
+label {
+  @include typography;
+}
+
+// Heading 1 font style
+h1,
+.h1 {
+  @include typography("h1");
+}
+
+// Heading 2 font style
+h2,
+.h2 {
+  @include typography("h2");
+}
+
+// Heading 3 font style
+h3,
+.h3 {
+  @include typography("h3");
+}
+
+// Heading 4 font style
+h4,
+.h4 {
+  @include typography("h4");
+}
+
+// Heading 5 font style
+h5,
+.h5 {
+  @include typography("h5");
+}
+
+// Heading 6 font style
+h6,
+.h6 {
+  @include typography("h6");
+}
+
+// Extra Small font style
+.extra--small--text {
+  @include typography("xSmall");
+}
+
+// Small Text font style
+small,
+.small--text {
+  @include typography("small");
+}
+
+// Subtitle font style
+.subtitle {
+  @include typography("subtitle");
+}
+
+*.text {
+  &--left {
+    text-align: left;
+  }
+
+  &--right {
+    text-align: right;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--break {
+    &,
+    & > * {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &--medium {
+    font-weight: var(--text-medium);
+  }
+
+  &--bold {
+    font-weight: var(--text-bold);
+  }
+}
+
+button {
+  font-family: $font-family-en, "Helvetica", sans-serif;
+}

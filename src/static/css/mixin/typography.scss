@@ -1,0 +1,48 @@
+@import "./media.scss";
+
+// Typography Mixins
+@mixin typography($type: null) {
+  @if $type == "h1" {
+    font-size: var(--text-xxl);
+    font-weight: var(--text-semi-bold);
+    line-height: 1.1em;
+  } @else if $type == "h2" {
+    font-size: var(--text-xl);
+    font-weight: var(--text-semi-bold);
+    line-height: 1.2em;
+  } @else if $type == "h3" {
+    font-size: var(--text-lg);
+    font-weight: var(--text-semi-bold);
+    line-height: 1.3em;
+
+    @include media($breakpoint-sm, "max-width") {
+      font-size: calc(var(--text-lg) / 1.2);
+    }
+  } @else if $type == "h4" {
+    font-size: var(--text-md);
+    font-weight: var(--text-semi-bold);
+    line-height: 1.4em;
+  } @else if $type == "h5" {
+    font-size: var(--text-sm);
+    font-weight: var(--text-semi-bold);
+    line-height: 1.5em;
+  } @else if $type == "h6" {
+    font-size: var(--text-xs);
+    font-weight: var(--text-semi-bold);
+    line-height: 1.6em;
+  } @else if $type == "subtitle" {
+    font-size: var(--text-lg);
+    font-weight: var(--text-semi-bold);
+    line-height: 1.1em;
+  } @else if $type == "small" {
+    font-size: var(--text-sm);
+    font-weight: var(--text-regular);
+    line-height: 1.1em;
+  } @else if $type == "xSmall" {
+    font-size: var(--text-xs);
+    font-weight: var(--text-regular);
+    line-height: 1.1em;
+  } @else {
+    font-size: var(--text-md);
+  }
+}

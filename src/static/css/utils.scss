@@ -1,0 +1,53 @@
+@import "mixin/layout";
+@import "mixin/media";
+
+.hide {
+  display: none !important;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-inline {
+  display: inline;
+}
+
+.d-flex {
+  display: flex;
+}
+
+@for $var from 0 to 11 {
+  @include gap("margin", $var);
+  @include gap("padding", $var);
+}
+
+.padding-md-0 {
+  @include media($breakpoint-md, "max-width") {
+    padding: 0;
+  }
+}
+
+.padding-lg-0 {
+  @include media($breakpoint-lg, "max-width") {
+    padding: 0;
+  }
+}
+
+.padding-lg-1 {
+  @include media($breakpoint-lg, "max-width") {
+    padding: var(--space);
+  }
+}
+
+.margin-bottom-lg-3 {
+  @include media($breakpoint-lg, "max-width") {
+    margin-bottom: var(--space-xxl);
+  }
+}
+
+@include responsive-toggle($breakpoint-sm, "sm");
+@include responsive-toggle($breakpoint-md, "md");
+@include responsive-toggle($breakpoint-lg, "lg");
+@include responsive-toggle($breakpoint-xl, "xl");
+@include responsive-toggle($breakpoint-xxl, "xxl");
