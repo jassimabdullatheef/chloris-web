@@ -8,6 +8,7 @@
   width: 100%;
   padding-left: var(--space);
   padding-right: var(--space);
+  position: relative;
 
   &:not([class*='margin']) {
     margin: 0 auto;

@@ -2,7 +2,31 @@
   background-image: url("../../images/hero-bg.jpg");
   background-size: cover;
   display: block;
+  position: relative;
   .title {
     color: var(--color-purple);
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30vh;
+    background: linear-gradient(0deg, var(--white), rgba(255, 255, 255, 0));
+  }
+}
+
+.shape {
+  border-radius: 0px 50px;
+  padding: var(--space-xl);
+
+  &--primary {
+    background: linear-gradient(83deg, var(--color-purple), var(--color-purple-light));
+    color: var(--white);
+    /* light shadow */
+    box-shadow: -10px 20px 50px #00447457;
   }
 }

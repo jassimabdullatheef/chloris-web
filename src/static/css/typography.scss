@@ -16,7 +16,6 @@ body {
 }
 
 #{$header-selectors} {
-  color: $header-text-color;
   margin-bottom: 0.5em;
   margin-top: 0.5em;
 }
@@ -24,8 +23,8 @@ body {
 // Body Text font style
 p {
   margin: 0 0 var(--space);
-  font-weight: var(--text-medium);
-  line-height: 1.4em;
+  font-weight: var(--text-base);
+  line-height: 1.7em;
 }
 
 p,
