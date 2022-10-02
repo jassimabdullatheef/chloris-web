@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "parcel src/index.pug",
-    "build": "parcel build src/index.pug --dist-dir build --public-url /"
+    "build": "rm -rf build && parcel build src/index.pug --dist-dir build --public-url /"
   },
   "repository": {
     "type": "git",
