@@ -1,0 +1,45 @@
+-
+  var contents = [
+    {
+      title: "Civil & MEP contracting",
+      content: "Civil and MEP contracting is one of the prestigious activity of Chloris Technical Contracting LLC in which the utmost care is given for achieving the best through hard work and inbuilt team spirit. Whether it be mechanical, electrical and plumbing, or it is civil contracting, our past experience in the undertakings for big or small constructions in short and long term purposes has strengthened to achieve the maximum benefit for the customers. Foolproof contracting work is the assurance we always offered to our customers. We take pride in keeping the word so far and will go on with the promise in the future too.",
+      image: "./images/services/civil-and-mep.png"
+    },
+    {
+      title: "Building general maintenance services",
+      subtitle: "Annual building maintenance and cleaning contracting",
+      content: "Our relationship with customers would never end up with the completion of a job. Extending the contracting tie-up, we provide annual building maintenance and cleaning contracting that take care of even the minute problems of the construction or designing process on yearly basis. If you are particular to keep your buildings to be as clean and tidy as it was built, there is no better option you can believe other than this because ours is the tested, proven, and highly qualified contracting service in the Middle East.",
+      image: "./images/services/building-general-maintenance.png"
+    },
+    {
+      title: "Interior decoration",
+      content: "Most of the time, buildings get the identity through the attraction and attitude they spread our to the world. Interior decoration, if it in the right hand, would create the positive outlook that remain unharmed as the unique look for years. Our interior decoration specialists, who are endowed with creative flair and the burning ambition to attain perfection, assist you to reach the technical and artistic peak for your dear structures.",
+      image: "./images/services/interior-design.png"
+    },
+    {
+      title: "Landscaping & Swimming Pools",
+      content: "Quite often, you might have been amazed by the beauty and loveliness around some buildings. You wished to have the same atmosphere around your place. But, what you don’t know is the creative persons behind those wonders. Here, we can help you to give the exact attraction to your dream construction as per your wish. If the guys who create them are innovative and inventive, landscaping and swimming pools could add to the life remarkable moments of joy. For this purpose, we line up a professional group to satisfy what is exactly in your creative mind.",
+      image: "./images/services/landscaping.png"
+    },
+    {
+      title: "Technical & oil field works",
+      content: "As it is a vital part of all other functions of an industry or a business, Technical side of any construction work is enormously important. Realizing the significance of it, We deploy a broad range of technicians who are skilled and experienced to execute the assigned work as much professionally as needed. Using best equipment and machineries, our core team of technicians has shown an exceptional performance over the years. Also, Chloris reassures your concerns over oil field contractions. Basing on solid structures in a highly unpredictable setting to dangers and calamities, our approach of consistency would be the advantage you could have over other in the long run.",
+      image: "./images/services/technical-and-oil-field-works.png"
+    }
+  ]
+
+section#services.margin-top-10
+  .container 
+    .container 
+        .column.column--auto.margin-right-2.padding-top-1
+            include ../images/grid.pug
+        .column
+          h3.subtitle Our Services
+    .container.service-container
+      each content in contents
+        .container.container--space-between.container--middle
+          .column.column--md--half.column--full.text--center
+            img(src=content.image, alt="")
+          .column.column--md--half.column--full
+            h2= content.title
+            p= content.content

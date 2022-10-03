@@ -45,3 +45,16 @@
     max-height: 30px;
   }
 }
+
+.service-container {
+  .container {
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    img {
+      max-width: $breakpoint-sm;
+      width: 90%;
+    }
+  }
+}
