@@ -22,11 +22,26 @@
 .shape {
   border-radius: 0px 50px;
   padding: var(--space-xl);
+  overflow: hidden;
 
   &--primary {
     background: linear-gradient(83deg, var(--color-purple), var(--color-purple-light));
     color: var(--white);
     /* light shadow */
     box-shadow: -10px 20px 50px #00447457;
+  }
+
+  &--outline {
+    border: 1px solid var(--color-gray-2);
+  }
+}
+
+.client-box {
+  padding: var(--space-xl) var(--space-lg);
+  text-align: center;
+  outline: 1px solid var(--color-gray-1);
+
+  img {
+    max-height: 30px;
   }
 }

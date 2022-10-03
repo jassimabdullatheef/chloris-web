@@ -58,6 +58,16 @@
       flex: none;
       width: calc(100% - 100% / 3);
     }
+
+    .column--#{$keyword}--one-fifth {
+      flex: none;
+      width: calc(100% / 5);
+    }
+
+    .column--#{$keyword}--two-fifth {
+      flex: none;
+      width: calc(100% - (100% / 5) * 3);
+    }
   }
 }
 

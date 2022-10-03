@@ -80,7 +80,8 @@
     &--three-quarter,
     &--quarter,
     &--one-third,
-    &--two-third {
+    &--two-third,
+    &--one-fifth {
       flex: none;
     }
 
@@ -106,6 +107,14 @@
 
     &--two-third {
       width: calc(100% - 100% / 3);
+    }
+    
+    &--one-fifth {
+      width: calc(100% / 5);
+    }
+
+    &--two-fifth {
+      width: calc(100% - (100% / 5) * 3);
     }
   }
 
