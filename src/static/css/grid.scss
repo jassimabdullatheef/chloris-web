@@ -30,6 +30,10 @@
     align-items: flex-start;
   }
 
+  &--content--top {
+    align-content: flex-start;
+  }
+
   &--bottom {
     align-items: flex-end;
   }

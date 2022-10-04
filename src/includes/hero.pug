@@ -16,7 +16,7 @@ session.hero
     .column.column--md--half.column--full
       img(src="./images/hero-image.png", alt="Chloris tech contracting")
     .column.column--md--half.column--full
-      h1.title
+      h1.text--primary
         | Get professional 
         br
         | technical contracting
@@ -24,8 +24,10 @@ session.hero
         | services in UAE.
       .container.margin-top-10
         a.button.button--secondary.margin-right-2(href="mailto:chlorisllc@gmail.com")
+          include ../images/email.pug
           | Contact us now
-        a.button.button--neutral(href="mailto:chlorisllc@gmail.com")
+        a.button.button--neutral(href="https://wa.me/00971504889608", rel="no_rel", target="_blank")
+          include ../images/whatsapp.pug
           | Whatsapp
   .container.container--middle.container--center
     .column.column--md--three-quarter.column--full.margin-top-5.margin-bottom-5

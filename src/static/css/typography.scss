@@ -120,6 +120,10 @@ small,
   &--bold {
     font-weight: var(--text-bold);
   }
+
+  &--primary {
+    color: var(--primary-color);
+  }
 }
 
 button {

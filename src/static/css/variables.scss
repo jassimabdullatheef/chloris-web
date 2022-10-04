@@ -37,6 +37,7 @@ $breakpoint-xxxl: 2000px;
   --color-green: #72d481;
   --color-red: #ff534e;
 
+  --primary-color: var(--color-purple);
   --button-color: var(--color-orange);
   --button-hover-color: lighten(var(--color-orange), 10%);
 
