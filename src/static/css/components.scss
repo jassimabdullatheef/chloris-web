@@ -91,3 +91,12 @@
     }
   }
 }
+
+footer {
+  padding-top: var(--space-xxxl);
+  background-color: var(--color-gray-1);
+}
+
+.border-top {
+  border-top: 1px solid var(--color-gray-2);
+}

@@ -104,6 +104,10 @@ small,
     text-align: center;
   }
 
+  &--middle {
+    vertical-align: middle;
+  }
+
   &--break {
     &,
     & > * {
